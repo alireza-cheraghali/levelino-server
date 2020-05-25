@@ -25,4 +25,4 @@ io.on('connection',(socket)=>{
       }
     })
 })
-server.listen(PORT,()=>logger.info(`Server Run at ${PORT} And Deploy with heroku`))
+server.listen(PORT,()=>logger.info(`Server Run at ${PORT}`))

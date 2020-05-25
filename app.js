@@ -42,7 +42,7 @@ var accessLogStream=rfs.createStream('access.log',{
 })
 app.use(morgan('combined',{stream:accessLogStream}))
 app.get('/',(req,res,next)=>{
-    res.status(200).send('Server Running ')
+    res.status(200).send('Server Running With Heroku')
 })
 app.post('/postImage',upload.single('postImage'),(req,res,next)=>{
     /*mongoClient.connect(url,{useUnifiedTopology:true},(err,db)=>{
