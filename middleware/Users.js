@@ -1,3 +1,5 @@
+const multer=require('multer');
+
 const MongoClient=require('mongodb').MongoClient;
 const mongoose=require('mongoose')
 const url="mongodb://127.0.0.1:27017";
@@ -11,7 +13,7 @@ exports.ADD_User=async(req,res)=>{
     const salt=await bcrypt.genSalt(10);
     const hashed=await bcrypt.hash(req.body.password,salt);
    if( req.body.password !=  req.body.confirmPassword){
-       return res.send('Password Dose Not Match');
+       return res.send('رمزهای واردشده یکسان نیستند');
    }
     try{
     const user=await new signupModel({
@@ -31,19 +33,20 @@ exports.ADD_User=async(req,res)=>{
                 return res.status(200).send('OK')
             })
             }else{
-                return res.status(200).send("Username has Exist")
+                return res.status(200).send("این نام کاربری وجود دارد لطفا یک نام دیگر انتخاب کنید")
             }
         })
         
     })
 }catch(error){
 if(error) throw error
-res.status(400).send('You Havved Erro')
+res.status(400).send('یک جای کار ایراد دارد')
 }
     }
 
 exports.Login=(req,res)=>{
     MongoClient.connect(url,{useUnifiedTopology:true},function(err,db){
+        if(err) throw err
         var dbo=db.db("Signup");
         var query={username:req.body.username};
         dbo.collection("users").find(query).toArray(function(err,result){
@@ -51,7 +54,7 @@ exports.Login=(req,res)=>{
             if(result.length==1){
                 bcrypt.compare(req.body.password,result[0].password,(err,find)=>{
                     if(find){
-                        const token=jwt.sign({email:result[0].email,password:result[0].password},'secret',{expiresIn:'1h'})
+                        const token=jwt.sign({email:result[0].email,userID:result[0].userID},'secret',{expiresIn:'1h'})
                         return res.send({token:token,userInformation:result[0]})
                     }
                     return res.send({Error:'نام کاربری یا رمز عبور اشتباه است'})
@@ -92,9 +95,10 @@ exports.GetUserInformation=(req,res)=>{
 MongoClient.connect(url,{useUnifiedTopology:true},function(err,db){
     if(err) throw err
     var dbo=db.db('Signup');
-    var _id=req.body._id
-    dbo.collection('users').find(_id).toArray(function(err,result){
+    var username={username:req.body.username}
+    dbo.collection('users').find(username).toArray(function(err,result){
         res.send(result)
     })
+    console.log(username)
 })
 }
