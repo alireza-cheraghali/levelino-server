@@ -1,7 +1,6 @@
 const mysql=require('mysql');
 const config=mysql.createConnection({
-    host:'DESKTOP-61MDJK0',
-    port:'3306',
+    host:'https://levelino.herokuapp.com/',
     user:'root',
     password:'alireza.09391306607,007',
     database:'post'
