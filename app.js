@@ -9,13 +9,7 @@ const router=require('./router/router')
 const mongoClient=require('mongodb').MongoClient;
 const url='mongodb://127.0.0.1:27017'
 //POSTIMAGE
-const mysql=require('mysql');
-const config=mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'alireza.09391306607,007',
-    database:'posts'
-})
+const SQL=require('./SQL/SqlConfig');
 const path=require('path');
 const moment=require('moment');
 const Date=moment().format('YYYY-MM-DD,h_mm_ss')
@@ -53,12 +47,12 @@ app.post('/postImage',upload.single('postImage'),(req,res,next)=>{
             console.log(result,query)
         })
     })*/
-    config.connect(function(err){
+    SQL.connect(function(err){
         if(err) throw err;
         winston.info('HELLO')
         const postimage=[req.file.filename,req.body.description];
         const sql="INSERT INTO postimage (PostPath,Description) VALUES (?)";
-        config.query(sql,[postimage],(err,result)=>{
+        SQL.query(sql,[postimage],(err,result)=>{
             if(err)throw err;
             res.send("SAVE SUCCESFULY")
         })

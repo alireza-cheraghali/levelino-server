@@ -24,6 +24,7 @@ exports.ADD_User=async(req,res)=>{
         phonenumber:req.body.phoneNumber,
     })
      MongoClient.connect(url,{useUnifiedTopology:true},function(err,db){
+         if (err) throw err
         var dbo=db.db("Signup");
         var query={username:req.body.username};
         dbo.collection("users").find(query).toArray(function(err,result){
@@ -83,6 +84,7 @@ MongoClient.connect(url,{useUnifiedTopology:true},function(err,db){
 exports.Remove_User=(req,res)=>{
     const username=req.body.username;
     MongoClient.connect(url,{useUnifiedTopology:true},function(err,db){
+        if(err) throw err
         var dbo=db.db("Signup");
         var query={username:username};
         dbo.collection('users').deleteOne(query,function(err,result){

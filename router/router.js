@@ -5,7 +5,8 @@ const mysql=require('mysql');
 const multer=require('multer');
 const checkAuth=require('../middleware/checkAuth');
 const config=mysql.createConnection({
-    host:'localhost',
+    host:'DESKTOP-61MDJK0',
+    port:'3306',
     user:'root',
     password:'alireza.09391306607,007',
     database:'posts'
