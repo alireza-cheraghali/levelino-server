@@ -1,12 +1,12 @@
 const express=require('express');
 const router=express.Router();
 const users=require('../middleware/Users')
+const Posts=require('../middleware/Posts')
 const mysql=require('mysql');
 const multer=require('multer');
 const checkAuth=require('../middleware/checkAuth');
 const config=mysql.createConnection({
-    host:'DESKTOP-61MDJK0',
-    port:'3306',
+    host:'localhost',
     user:'root',
     password:'alireza.09391306607,007',
     database:'posts'
@@ -34,4 +34,5 @@ router.put('/changeInformation',users.UpdateInformation)
 router.get('/checkAuth',checkAuth,(req,res,next)=>{
     res.send('Authenticate')
 })
+router.post('/postText',Posts.TextPost)
 module.exports=router

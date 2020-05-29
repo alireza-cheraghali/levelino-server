@@ -1,8 +1,8 @@
 const mysql=require('mysql');
 const config=mysql.createConnection({
-    host:'https://levelino.herokuapp.com/',
+    host:'localhost',
     user:'root',
     password:'alireza.09391306607,007',
-    database:'post'
+    database:'levelino'
 })
 module.exports=config
