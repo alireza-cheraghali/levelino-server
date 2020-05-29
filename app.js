@@ -34,6 +34,26 @@ var accessLogStream=rfs.createStream('access.log',{
     compress:'gzip',
     path:path.join(__dirname,'log')
 })
+
+const audiostorage=multer.diskStorage({
+    destination:'G:/React and Node/nextproject/public/static/Audio',
+    filename:(req,file,cb)=>{
+        cb(null,file.fieldname+'-'+Date+path.extname(file.originalname))
+    }
+})
+const uploadAudio=multer({
+    storage:audiostorage
+})
+app.post('/postAudio',uploadAudio.single('audioFile'),(req,res)=>{
+    SQL.connect(function(err){
+        if (err) throw err;
+        var audioPostData=[req.file.filename,req.body.description]
+        SQL.query("INSERT INTO audiopost (AudioPath,Description) VALUES (?)",[audioPostData],function(err,result){
+            if(err) throw err;
+            res.send(result)
+        })
+    })
+})
 app.use(morgan('combined',{stream:accessLogStream}))
 app.get('/',(req,res,next)=>{
     res.status(200).send('Server Running With Heroku And Enjoy ')
