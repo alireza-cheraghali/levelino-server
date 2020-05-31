@@ -44,7 +44,7 @@ const audiostorage=multer.diskStorage({
 const uploadAudio=multer({
     storage:audiostorage
 })
-app.post('/postAudio',uploadAudio.single('audioFile'),(req,res)=>{
+app.post('/postAudio',uploadAudio.single('audioPost'),(req,res)=>{
     SQL.connect(function(err){
         if (err) throw err;
         var audioPostData=[req.file.filename,req.body.description]
@@ -53,12 +53,13 @@ app.post('/postAudio',uploadAudio.single('audioFile'),(req,res)=>{
             res.send(result)
         })
     })
+    console.log(req.file)
 })
 app.use(morgan('combined',{stream:accessLogStream}))
 app.get('/',(req,res,next)=>{
     res.status(200).send('Server Running With Heroku And Enjoy ')
 })
-app.post('/postImage',upload.single('postImage'),(req,res,next)=>{
+app.post('/postImage',upload.single('imagePost'),(req,res,next)=>{
     /*mongoClient.connect(url,{useUnifiedTopology:true},(err,db)=>{
         const dbo=db.db('posts')
         const query={PostPath:req.file.filename,Description:req.body.description}
@@ -71,7 +72,7 @@ app.post('/postImage',upload.single('postImage'),(req,res,next)=>{
         if(err) throw err;
         winston.info('HELLO')
         const postimage=[req.file.filename,req.body.description];
-        const sql="INSERT INTO postimage (PostPath,Description) VALUES (?)";
+        const sql="INSERT INTO imagepost (PostPath,Description) VALUES (?)";
         SQL.query(sql,[postimage],(err,result)=>{
             if(err)throw err;
             res.send("SAVE SUCCESFULY")

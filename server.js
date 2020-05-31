@@ -25,4 +25,4 @@ io.on('connection',(socket)=>{
       }
     })
 })
-server.listen(PORT,()=>logger.info(`Server Run at ${PORT}`))
+server.listen(PORT,()=>console.log(`Server Run at ${PORT}`))

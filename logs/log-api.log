@@ -1,585 +1,115 @@
-[2020-05-22T13:17:35.111Z] info Server Run at 8080
-[2020-05-22T13:18:22.735Z] info Server Run at 8080
-[2020-05-22T13:23:47.372Z] error Server Run at 8080
-[2020-05-22T13:24:28.927Z] error Server Run at 8080
-[2020-05-22T13:25:00.839Z] error Server Run at 8080
-[2020-05-22T13:25:12.955Z] error Server Run at 8080
-[2020-05-22T14:58:58.647Z] error Server Run at 8080
 {
   message: 'Server Run at 8080',
-  level: 'error',
-  label: 'Right Now1!',
-  timestamp: '2020-05-22T14:59:38.646Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'error',
-  label: 'Right Now1!',
-  timestamp: '2020-05-22T15:06:14.457Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'error',
-  label: 'Right Now1!',
-  timestamp: '2020-05-22T15:09:03.080Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'error',
-  label: 'Right Now1!',
-  timestamp: '2020-05-22T15:09:26.250Z'
-}
-[2020-05-22,7_40_02] error Server Run at 8080
-[2020-05-22,7_40_15] error Server Run at 8080
-{
-  message: 'Server Run at 8080',
-  level: 'error',
-  timestamp: '2020-05-22T15:11:00.507Z'
-}
-[2020-05-22,7_41_37] error Server Run at 8080
-{
-            [2020-05-22,7_42_16]
-             error
-              Server Run at 8080}
-{
-            [time : 2020-05-22,7_42_42]
-            level: error
-            message: Server Run at 8080}
-
-        {
-            time : 2020-05-22,7_42_58
-            level: error
-            message: Server Run at 8080
-        }
-
-{
-            time : 2020-05-22,7_56_14
-            level: error
-            message: Server Run at 8080
-}
-
-{
-    time : 2020-05-22,7_56_32
-    level: error
-    message: Server Run at 8080
-}
-{
-  message: 'Server Run at 8080',
-  level: 'error',
-  timestamp: '2020-05-25T06:43:58.168Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'error',
-  timestamp: '2020-05-25T06:56:52.150Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T06:57:14.705Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T07:02:32.064Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T07:03:33.346Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T07:04:00.973Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T07:05:03.139Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T07:05:18.679Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T07:11:10.430Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:06:21.642Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:06:48.568Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:07:54.138Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:09:17.806Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:09:25.820Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:09:45.252Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:11:19.733Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:12:17.476Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:12:52.999Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:13:04.385Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:15:08.229Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:15:28.232Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:17:34.159Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:18:15.421Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:24:03.311Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:40:20.500Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:45:21.712Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:49:01.833Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:52:05.986Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:53:27.405Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T08:56:53.830Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T11:10:11.220Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T16:17:39.183Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T16:36:22.709Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T18:51:13.468Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T18:55:20.878Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T18:56:04.121Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T18:59:01.139Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-25T19:24:51.109Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T15:01:10.241Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T15:03:31.651Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T15:19:42.521Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:27:32.746Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:35:06.616Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:35:38.356Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:36:39.790Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:37:45.117Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:38:26.449Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:38:39.225Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:39:02.558Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:39:26.732Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:40:08.349Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:40:22.767Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:41:27.326Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:44:27.573Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:44:48.245Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:45:22.781Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:45:49.635Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:46:17.104Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:48:43.386Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T17:49:30.648Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T18:30:42.750Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T18:32:29.022Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T18:37:19.503Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T18:38:37.781Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T18:39:04.716Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T18:39:27.663Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T18:40:31.063Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T18:41:05.308Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-26T18:42:42.548Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-28T16:35:00.523Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-28T16:40:19.614Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-28T16:41:19.734Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-28T16:45:47.892Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-28T16:49:00.086Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-28T16:51:04.018Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-28T16:57:07.631Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-28T16:59:22.552Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-29T08:02:34.562Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-29T08:03:53.443Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-29T08:05:42.343Z'
-}
-{
-  message: 'Server Run at 8080',
-  level: 'info',
-  timestamp: '2020-05-29T10:44:44.658Z'
-}
-{
-  message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T10:45:16.294Z'
+  timestamp: '2020-05-31T20:14:43.547Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T10:46:13.458Z'
+  timestamp: '2020-05-31T20:16:57.462Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:00:04.427Z'
+  timestamp: '2020-05-31T20:17:40.845Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:03:17.695Z'
+  timestamp: '2020-05-31T20:17:59.526Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:03:49.896Z'
+  timestamp: '2020-05-31T20:18:44.042Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:07:46.866Z'
+  timestamp: '2020-05-31T20:20:27.056Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:08:46.561Z'
+  timestamp: '2020-05-31T20:21:06.474Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:09:16.840Z'
+  timestamp: '2020-05-31T20:22:09.952Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:09:30.614Z'
+  timestamp: '2020-05-31T20:25:22.604Z'
 }
 {
-  message: 'Server Run at 8080',
+  message: 'USER WITH USERNAME: Alireza002 LOGIN AT 1590956727712',
   level: 'info',
-  timestamp: '2020-05-29T11:10:01.770Z'
+  timestamp: '2020-05-31T20:25:27.712Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:10:46.705Z'
+  timestamp: '2020-05-31T20:26:43.753Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:11:02.532Z'
+  timestamp: '2020-05-31T20:26:55.551Z'
 }
 {
-  message: 'Server Run at 8080',
+  message: 'USER WITH USERNAME: Alireza002 LOGIN AT 2020:06:01-12:56:55',
   level: 'info',
-  timestamp: '2020-05-29T11:16:43.211Z'
+  timestamp: '2020-05-31T20:26:58.880Z'
 }
 {
-  message: 'Server Run at 8080',
+  message: 'PASSWORD IS INCORRECT',
   level: 'info',
-  timestamp: '2020-05-29T11:16:58.405Z'
+  timestamp: '2020-05-31T20:27:11.599Z'
 }
 {
-  message: 'Server Run at 8080',
+  message: 'USER WITH USERNAME: Alirezaa002 NOT EXIST IN DB',
   level: 'info',
-  timestamp: '2020-05-29T11:19:00.384Z'
+  timestamp: '2020-05-31T20:27:19.599Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:19:17.465Z'
+  timestamp: '2020-05-31T20:28:23.287Z'
 }
 {
-  message: 'Server Run at 8080',
+  message: 'USER WITH USERNAME: Alireza002 LOGIN AT 2020:06:01-12:58:23',
   level: 'info',
-  timestamp: '2020-05-29T11:23:10.364Z'
+  timestamp: '2020-05-31T20:28:27.582Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:27:11.408Z'
+  timestamp: '2020-05-31T20:31:00.337Z'
 }
 {
-  message: 'Server Run at 8080',
+  message: 'USER WITH USERNAME: Alireza002 LOGIN AT 2020:06:01-01:01:00 WITH TOKEN:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTA5NTcwNjMsImV4cCI6MTU5MDk2MDY2M30.v6mLgq936U-6Q9QGqAXfyBS0t16Tchc7kaXp8wK4Zys',
   level: 'info',
-  timestamp: '2020-05-29T11:28:55.390Z'
+  timestamp: '2020-05-31T20:31:03.183Z'
 }
 {
   message: 'Server Run at 8080',
   level: 'info',
-  timestamp: '2020-05-29T11:29:37.432Z'
+  timestamp: '2020-05-31T20:31:31.221Z'
 }
 {
-  message: 'Server Run at 8080',
+  message: 'USER WITH USERNAME Alireza002 HAS EXIST IN DB',
   level: 'info',
-  timestamp: '2020-05-29T11:30:27.153Z'
+  timestamp: '2020-05-31T20:59:48.759Z'
 }
 {
-  message: 'Server Run at 8080',
+  message: 'Alireza002 has Saved With Password:123456',
   level: 'info',
-  timestamp: '2020-05-29T13:20:03.686Z'
+  timestamp: '2020-05-31T21:02:16.437Z'
 }
 {
-  message: 'Server Run at 8080',
+  message: 'Alireza0022 has Saved With Password:123456',
   level: 'info',
-  timestamp: '2020-05-29T13:22:24.917Z'
+  timestamp: '2020-05-31T21:02:52.503Z'
 }
