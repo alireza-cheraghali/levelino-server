@@ -1,6 +1,14 @@
 const multer=require('multer');
 const SQL=require('../SQL/SqlConfig');
 const logger=require('../utils/logger')
+const nodemailer=require('nodemailer');
+var transporter=nodemailer.createTransport({
+    service:'gmail',
+    auth:{
+        user:"cheraghalialireza33@gmail.com",
+        pass:"alireza.09391306607,007"
+    }
+})
 SQL.connect(function(err){
     if (err) throw err
 })
@@ -8,46 +16,52 @@ const url="mongodb://127.0.0.1:27017";
 const bcrypt = require('bcryptjs');
 const jwt=require('jsonwebtoken');
 const moment=require('moment');
-const Date=moment().format('YYYY:MM:DD-hh:mm:ss')
+const Date=moment().add(5, 'minutes').format('YYYY:MM:DD-HH:mm:ss')
 var userFind;
 exports.SignUp=async(req,res)=>{
-    var activeCode=Math.floor(Math.random()*1000000)
     if (req.body.password != req.body.confirmPassword){
         logger.info('Password And Confirm Password Dose not Match')
         return res.send("PASSWORD DOES NOT MACHED")
     }
     const salt=await bcrypt.genSalt(10);
     const hashed=await bcrypt.hash(req.body.password,salt)
-    var userInformation=[req.body.username,req.body.email,hashed,req.body.phoneNumber,activeCode]
+    var activeCode=Math.floor(Math.random()*1000000)
+    var userInformation=[req.body.username,req.body.email,hashed,req.body.phoneNumber,activeCode,Date]
     SQL.query("SELECT * FROM customers WHERE Username = (?)",[req.body.username],(err,result)=>{
         if(err){
             logger.error("ERROR TO CONNECT DB IN API:signup")
             return res.send("ERROR IN DB")
         }
         if(result.length!==1){
-            SQL.query("INSERT INTO customers (Username,Email,Password,PhoneNumber,ActiveAccountCode) VALUES (?)",[userInformation],function(err,result){
+            let SqlQuery="INSERT INTO customers (Username,Email,Password,PhoneNumber,ActiveAccountCode,ExpireActiveAccountCode) VALUES (?)"
+            SQL.query(SqlQuery,[userInformation],function(err,result){
                 if(err){
                     logger.info("EMAIL HAS EXIST")
                     return res.send("EMAIL HAS EXIST")
                 }
                 logger.info(`${userInformation[0]} has Saved With Password:${req.body.password}`)
-                return res.send("congratulations")
+                var mailOption={
+                    from:'cheraghalialireza33@gmail.com',
+                    to:`${req.body.email}`,
+                    subject:"Change Password",
+                    html:`<h1>Active Code</h1><h2 style='color:red'>${userInformation[4]}</h2> `
+                }
+                transporter.sendMail(mailOption,function(err,info){
+                    if(info){
+                        logger.info(`Send Active Code Mail To ${req.body.email} At ${Date}`)
+                        return res.send("SEND EMAIL")
+                    }else{
+                        logger.error(`${err} At ${Date}`)
+                        return res.send(err)
+                    }
+                })
             })
         }else{
             logger.info(`USER WITH USERNAME ${userInformation[0]} HAS EXIST IN DB`)
             return res.send("USER HAS EXIST")
         }
     })
-    try{
-        SQL.query("UPDATE customers SET ExpireActiveAccountCode=now()+420 WHERE Username= ?",[userInformation[0]],function(err,result){
-            if (err) throw err 
-            res.send("Updated")
-        })
-    }catch(err){
-        res.send("ERROR")
     }
-    }
-
 exports.Login=(req,res)=>{
     var userInformation=[req.body.username,req.body.password]
     SQL.query("SELECT * FROM customers WHERE Username = (?)",[userInformation[0]],function(err,result){
@@ -106,7 +120,6 @@ MongoClient.connect(url,{useUnifiedTopology:true},function(err,db){
     console.log(username)
 })
 }
-
 /* MONGO DB SET 
 const MongoClient=require('mongodb').MongoClient;
 const mongoose=require('mongoose')

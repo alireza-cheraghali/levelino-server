@@ -6,6 +6,7 @@ const bodyParser=require('body-parser');
 const cors=require('cors');
 const getImage=require('./router/postImage')
 const router=require('./router/router')
+const passwordRouter=require("./router/forgetPassword")
 const mongoClient=require('mongodb').MongoClient;
 const url='mongodb://127.0.0.1:27017'
 //POSTIMAGE
@@ -86,4 +87,5 @@ app.post('/postImage',upload.single('imagePost'),(req,res,next)=>{
 })
 app.use('/',getImage)
 app.use('/',router)
+app.use('/password',passwordRouter)
 module.exports=app

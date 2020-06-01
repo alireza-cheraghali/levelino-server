@@ -113,3 +113,68 @@
   level: 'info',
   timestamp: '2020-05-31T21:02:52.503Z'
 }
+{
+  message: 'Alireza0022 has Saved With Password:123456',
+  level: 'info',
+  timestamp: '2020-06-01T17:51:48.932Z'
+}
+{
+  message: 'Alireza0022 has Saved With Password:123456',
+  level: 'info',
+  timestamp: '2020-06-01T17:53:55.738Z'
+}
+{
+  message: 'Alireza0022 has Saved With Password:123456',
+  level: 'info',
+  timestamp: '2020-06-01T18:20:50.538Z'
+}
+{
+  message: 'EMAIL HAS EXIST',
+  level: 'info',
+  timestamp: '2020-06-01T18:23:12.458Z'
+}
+{
+  message: 'EMAIL HAS EXIST',
+  level: 'info',
+  timestamp: '2020-06-01T18:23:22.269Z'
+}
+{
+  message: 'Alireza0022 has Saved With Password:123456',
+  level: 'info',
+  timestamp: '2020-06-01T18:23:44.808Z'
+}
+{
+  message: 'Alireza0022 has Saved With Password:123456',
+  level: 'info',
+  timestamp: '2020-06-01T18:27:51.309Z'
+}
+{
+  message: 'Alireza0022 has Saved With Password:123456',
+  level: 'info',
+  timestamp: '2020-06-01T18:28:40.047Z'
+}
+{
+  message: 'Alireza0022 has Saved With Password:123456',
+  level: 'info',
+  timestamp: '2020-06-01T18:30:15.903Z'
+}
+{
+  message: 'Send Email',
+  level: 'info',
+  timestamp: '2020-06-01T18:30:18.610Z'
+}
+{
+  message: 'Email With  Email Addres Alireza_ch_002@yahoo.co Is Not Exist In DB',
+  level: 'info',
+  timestamp: '2020-06-01T20:07:46.318Z'
+}
+{
+  message: 'Active Code And Send Code By Client is Same ',
+  level: 'info',
+  timestamp: '2020-06-01T20:08:28.814Z'
+}
+{
+  message: 'Active Code And Send Code By Client is Not Same ',
+  level: 'info',
+  timestamp: '2020-06-01T20:08:32.118Z'
+}
