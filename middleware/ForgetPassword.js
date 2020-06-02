@@ -1,8 +1,8 @@
 const SQL=require('../SQL/SqlConfig');
 const logger=require('../utils/logger')
 const moment=require('moment');
-const Date=moment().add(5, 'minutes').format('YYYY:MM:DD-HH:mm:ss')
-const nowDate=moment().format('YYYY:MM:DD-HH:mm:ss')
+const Date=moment().add(5, 'minutes').format('YYYY/MM/DD-HH:mm:ss')
+const nowDate=moment().format('YYYY/MM/DD-HH:mm:ss')
 const nodemailer=require('nodemailer');
 var transporter=nodemailer.createTransport({
     service:'gmail',
@@ -25,31 +25,38 @@ exports.DeleteActiveCodeHasExpired=(req,res)=>{
         }
     })
 }
-exports.CheckActiveCode=(req,res)=>{
+exports.CheckActiveCode=async(req,res)=>{
+    
     let query="SELECT * FROM customers WHERE Email=?"
     SQL.query(query,[req.body.Email],function(err,result){
         if(err){
             logger.error(`${err} At ${nowDate}`)
             return err
         } 
-        if(result[0].ActiveAccountCode==req.body.ActiveAccountCode){
+          SQL.query("CALL CheckExpireDate()",function(err,result){
+            if(err){
+                logger.error("Error In CheckExpireDate SP")
+                throw err
+            }
+        })
+        if(result[0].ActiveAccountCode==req.body.ActiveAccountCode && result[0].ExpireActiveAccountCode!=null){
             logger.info(`Active Code And Send Code By Client is Same `)
-            res.send("True")
+            res.send({successful:'Succesful'})
         }else{
             logger.info(`Active Code And Send Code By Client is Not Same `)
-            return res.send("False")
+            return res.send({Error:"Code is not Correct"})
         }
     })
 }
 exports.ForgetPasswordWithoutLogin=(req,res)=>{
+    let ActiveAccountCode=Math.floor(Math.random()*1000000);
     var mailOption={
         from:'cheraghalialireza33@gmail.com',
         to:`${req.body.Email}`,
         subject:"Change Password",
-        html:`<h1>Active Code</h1><h2 style='color:red'>${req.body.ActiveAccountCode}</h2> `
+        html:`<h1>Active Code</h1><h2 style='color:red'>${ActiveAccountCode}</h2> `
     }
     SQL.query('SELECT * FROM customers WHERE Email=(?)',[req.body.Email],(err,result)=>{
-        console.log(req.body.ActiveAccountCode)
         if (err){
             logger.error(`${err} At ${nowDate}`)
             return err
@@ -57,7 +64,7 @@ exports.ForgetPasswordWithoutLogin=(req,res)=>{
         if(result.length===1){
             transporter.sendMail(mailOption,function(err,info){
                 if(info){
-                    const information=[Date,req.body.ActiveAccountCode,req.body.Email]
+                    const information=[Date,ActiveAccountCode,req.body.Email]
                     SQL.query("UPDATE customers SET ExpireActiveAccountCode=? ,ActiveAccountCode=? WHERE Email=?",information,(err,result)=>{
                         if (err){
                             logger.error(`${err} At ${nowDate}`)

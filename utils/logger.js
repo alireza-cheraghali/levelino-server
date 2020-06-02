@@ -1,7 +1,6 @@
 const {createLogger,format,transports} =require('winston')
 const moment=require('moment')
 const Date=moment().format('YYYY-MM-DD,h_mm_ss')
-
 module.exports=createLogger({
     format:format.combine(
         format.simple(),
