@@ -72,15 +72,15 @@ exports.Login=(req,res)=>{
                 if(find){
                     const token=jwt.sign({email:result[0].email,password:result[0].password},'secret',{expiresIn:'1h'})
                     logger.info(`USER WITH USERNAME: ${req.body.username} AND HAS TOKEN LOGIN AT ${Date} `)
-                    return res.send("LOGIN")
+                    return res.send({token:token,userInformation:result[0]})
                 }else{
                     logger.info('PASSWORD IS INCORRECT')
-                    return res.send("USER NOT FOUND")
+                    return res.send({Error:'نام کاربری یا رمز عبور اشتباه است'})
                 }
             })
         }else{
             logger.info(`USER WITH USERNAME: ${req.body.username} NOT EXIST IN DB`)
-            return res.send("User Not Found")
+            return res.send({Error:'نام کاربری یا رمز عبور اشتباه است'})
         }
     })
 }

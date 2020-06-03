@@ -1,7 +1,7 @@
 const SQL=require('../SQL/SqlConfig');
 const logger=require('../utils/logger')
 const moment=require('moment');
-const Date=moment().add(5, 'minutes').format('YYYY/MM/DD-HH:mm:ss')
+const Date=moment().add(5, 'm').format('YYYY/MM/DD-HH:mm:ss')
 const nowDate=moment().format('YYYY/MM/DD-HH:mm:ss')
 const nodemailer=require('nodemailer');
 var transporter=nodemailer.createTransport({
@@ -80,7 +80,7 @@ exports.ForgetPasswordWithoutLogin=(req,res)=>{
             })
         }else{
                 logger.info(`Email With  Email Addres ${req.body.Email} Is Not Exist In DB`)
-           return res.send("Email Not Found")
+                return res.send({Error:"Email Not Found"})
         }
     })
 }
