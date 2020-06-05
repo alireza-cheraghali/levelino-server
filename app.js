@@ -8,6 +8,7 @@ const getImage=require('./router/postImage')
 const router=require('./router/router')
 const passwordRouter=require("./router/forgetPassword")
 const changePasswordRouter=require('./router/changePassword')
+const questionRouter=require('./router/question')
 const mongoClient=require('mongodb').MongoClient;
 const url='mongodb://127.0.0.1:27017'
 //POSTIMAGE
@@ -90,4 +91,5 @@ app.use('/',getImage)
 app.use('/',router)
 app.use('/password',passwordRouter)
 app.use('/changePassword',changePasswordRouter)
+app.use('/question',questionRouter)
 module.exports=app

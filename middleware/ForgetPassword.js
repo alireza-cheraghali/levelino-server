@@ -80,7 +80,7 @@ exports.ForgetPasswordWithoutLogin=(req,res)=>{
             })
         }else{
                 logger.info(`Email With  Email Addres ${req.body.Email} Is Not Exist In DB`)
-                return res.send({Error:"Email Not Found"})
+                return res.send({Error:`Email Not Found`})
         }
     })
 }
